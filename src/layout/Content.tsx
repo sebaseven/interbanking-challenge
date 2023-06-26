@@ -6,18 +6,16 @@ import { useAppDispatch, useAppSelector } from '../hooks/useCustomState';
 import { agregarFrase } from '../store/slices/frases/frases'
 import { RootState } from '~/store';
 import CardPhrase from '../MyPhrasesApp/CardPhrase';
-import { IFrase } from '../interfaces/frase-interface';
+import {filterPhrases} from '../hooks/useFilter';
 
  const Content = () => {
   const [openModalPhrase, setOpenModaPhrase] = useState<boolean>(false);
   const phrasesState = useAppSelector((state: RootState) => state.phrasesState)
 
-
   const [texto, setTexto] = useState<string>('')
   const [busqueda, setBusqueda] = useState<string>('')
 
-  const phrasesFiltered = phrasesState.filter((frase:IFrase) => frase.phrase.includes(busqueda)) 
-
+  const phrasesFiltered = filterPhrases(phrasesState,busqueda)
 
   const dispatch = useAppDispatch()
   const openModal = () => {
