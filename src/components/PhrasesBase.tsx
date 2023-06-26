@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import Content from './content/Content';
 import Header from './header/Header';
-import Copyright from './content/Copyright';
+import Copyright from './footer/Copyright';
 
 const PhrasesBase = () => {
   return (
