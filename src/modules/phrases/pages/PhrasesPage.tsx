@@ -1,10 +1,11 @@
-import Box from '@mui/material/Box';
-import Content from './content/Content';
-import Header from './header/Header';
-import Copyright from './footer/Copyright';
+import {Container,Box} from '@mui/material';
+import { Content } from '../components/content/Content';
+import Header from '../components/header/Header';
+import Copyright from '../components/footer/Copyright';
 
-const PhrasesBase = () => {
+export const PhrasesPage = () => {
   return (
+    <Container maxWidth={false}>
       <Box sx={{ display: 'flex', minHeight: '100vh' }}>
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
           <Header  />
@@ -16,6 +17,6 @@ const PhrasesBase = () => {
           </Box>
         </Box>
       </Box>
+    </Container>
   );
 }
-export default PhrasesBase;

@@ -1,10 +1,56 @@
-body {
-    background-color: #fff;
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-size: 50px;
+html,body {
     margin: 0;
-    padding: 0;
-    text-rendering: optimizeLegibility;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    background-color: #282c34;
+    color: white;
     -webkit-font-smoothing: antialiased;
-}
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  .logoMain {
+    height: 4rem;
+    pointer-events: none;
+  }
+  
+  .main-layout {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  nav {
+    background-color: #363a45;
+    height: 100vh;
+    overflow-y: scroll;
+    text-align: center;
+    width: 250px;
+  }
+  nav ul {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0;
+  }
+  
+  nav li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  
+  nav li a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+  
+  .nav-active {
+    color: grey;
+    transition: all .3s ease-out;
+  }

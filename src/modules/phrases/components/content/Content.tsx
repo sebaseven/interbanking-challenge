@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { AddCircleRounded, Search as SearchIcon } from '@mui/icons-material';
 import {AppBar,Toolbar,Paper,Grid,Button,TextField,} from '@mui/material';
 import PhraseModalInput from '../PhraseModalInput';
-import { useAppDispatch, useAppSelector } from '../../hooks/useCustomState';
-import { agregarFrase } from '../../store/slices/frases/frases'
+import { useAppDispatch, useAppSelector } from '../../../../hooks/useCustomState';
+import { agregarFrase } from '../../../../store/slices/frases/frases'
 import { RootState } from '~/store';
 import CardPhrase from '../CardPhrase';
-import {filterPhrases} from '../../hooks/useFilter';
+import {filterPhrases} from '../../../../hooks/useFilter';
 
- const Content = () => {
+export const Content = () => {
   const [openModalPhrase, setOpenModaPhrase] = useState<boolean>(false);
   const phrasesState = useAppSelector((state: RootState) => state.phrasesState)
 
@@ -84,4 +84,3 @@ import {filterPhrases} from '../../hooks/useFilter';
     </Paper>
   );
 }
-export default Content;

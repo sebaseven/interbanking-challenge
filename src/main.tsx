@@ -5,15 +5,14 @@ import { Provider } from 'react-redux'
 import { store } from './store'
 import { ThemeProvider } from '@emotion/react'
 import { theme } from './theme'
-import PhrasesScreen from './components/PhrasesBase'
+import { Navigation } from './routes/Navigation'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <Provider store={ store }>
-    <ThemeProvider theme={theme}>
-    {/* <JournalApp /> */}
-    <PhrasesScreen />
-    </ThemeProvider>
+     <ThemeProvider theme={theme}>
+      <Navigation />
+     </ThemeProvider>
     </Provider>
   </React.StrictMode>,
 )
