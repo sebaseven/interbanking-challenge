@@ -1,10 +1,13 @@
 import { HomePage,AboutUsPage,PhrasesPage } from '../modules/phrases/pages';
 
+type JSXComponent = () => JSX.Element;
+
 interface RouteConfig {
     to: string;
     path: string;
-    Component:() => JSX.Element;
+    Component: JSXComponent;
     name: string;
+    children?: RouteConfig[];
 }
 
 export const routes: RouteConfig[] = [
