@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route, NavLink, Navigate } from 'react-router-do
 import logo from '../assets/logoIB.png'
 import { routes } from './routes';
 
-
 export const Navigation = () => {
   return (
     <BrowserRouter>
@@ -26,7 +25,7 @@ export const Navigation = () => {
               <Route key={path} path={path} element={<Component />} />
             ))
           }
-          <Route path="/*" element={<Navigate to={routes[0].to} replace />} />
+          <Route path="/*" element={<Navigate to={ routes.length ? routes[0].to : '' } replace />} />
         </Routes>
       </div>
     </BrowserRouter>
